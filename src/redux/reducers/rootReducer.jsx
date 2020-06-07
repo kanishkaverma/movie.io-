@@ -7,4 +7,4 @@ const rootReducer = combineReducers({
   delta
 })
 
-export default rootReducer;  
+export default rootReducer;   

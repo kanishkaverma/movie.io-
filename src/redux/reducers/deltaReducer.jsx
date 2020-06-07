@@ -5,7 +5,9 @@ import initialState from './initialState';
 export default function deltaReducer(state = initialState, action) {
   switch (action.type) {
     
-
+    case (types.UPDATE_MOVIE_TILE_DATA): {
+      return Object.assign({}, state, { ...state, movieTileData: action.data });
+    }
     default:
       return state;
   }
