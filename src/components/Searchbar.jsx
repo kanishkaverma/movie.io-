@@ -3,14 +3,20 @@ import APIKEY from "../config/apikey";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { updateMovieTileData } from "../redux/actions/actions";
+import { FaSearch } from "react-icons/fa";
 
 class Searchbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      query: "",
+      query: "red",
     };
   }
+
+  componentDidMount() {
+    this.onSubmit();
+  }
+  
   handleQueryChange = (event) => {
     event.preventDefault();
 
@@ -36,9 +42,9 @@ class Searchbar extends Component {
     return (
       <div className="searchbar-root">
         <input type="text" value={query} onChange={this.handleQueryChange} />
-        <button className="input-label" onClick={this.onSubmit}>
-          submit
-        </button>
+        <div className="icon" onClick={this.onSubmit}>
+          <FaSearch/>
+        </div>
       </div>
     );
   }

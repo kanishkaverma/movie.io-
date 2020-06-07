@@ -1,4 +1,29 @@
 .movieTile-root {
     font-size: 1em;
     font-weight: bold;
+    display: flex;
+    background-color: grey;
+    padding: 20px;;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    
+    img {
+        width: 200px;
+        height: 300px;
+    }
+
+    .content {
+        letter-spacing: initial;
+        margin-left: 10px;
+        font-family: 'Playfair Display', serif;
+        text-transform: none;
+        .title {
+            font-size: 1em;
+            
+        }
+        .overview {
+            font-size: 0.8em;
+            
+        }
+    }
 }

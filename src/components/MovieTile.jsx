@@ -11,9 +11,11 @@ export default class MovieTile extends Component {
 
     return (
       <div className="movieTile-root">
-        <img src={imgpath} />
-        <div>{data.title}</div>
-        <div>{data.overview}</div>
+        <img className="image" src={imgpath} />
+        <div className="content">
+          <div className="title" >{data.title}</div>
+          <div className="overview">{data.overview}</div>
+        </div>
       </div>
     );
   }

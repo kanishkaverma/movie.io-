@@ -12,7 +12,7 @@ class Home extends Component {
     const { movieTileData } = this.props;
     return (
       <div className="home-page-root">
-        Home Page
+        Movie.IO
         <Searchbar />
         {movieTileData.map((x, i) => (
           <MovieTile data={x} key={i} />
